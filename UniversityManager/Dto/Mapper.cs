@@ -43,5 +43,26 @@ namespace UniversityManager.Dto
             };
             return entity;
         }
+
+        public SubjectDto MapBaseEntityToDto(Subject entity)
+        {
+            SubjectDto dto = new SubjectDto()
+            {
+                Title = entity.Title,
+                Id = entity.SubjectId
+            };
+            return dto;
+        }
+        public SubjectDto MapEntityToDto(Subject entity)
+        {
+            SubjectDto dto = MapBaseEntityToDto(entity);
+            dto.TeacherCount = entity.Teachers?.Count ?? 0;
+            return dto;
+        }
+
+        internal Subject MapDtoToEntity(SubjectDto? subject)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
