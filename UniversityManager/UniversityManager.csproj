@@ -1,10 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Data\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="Data\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Data\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Data\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Data\index.html" />
+    <Content Include="Data\js\site.js" />
+    <Content Include="Data\style\site.css" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.1" />
@@ -14,6 +24,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Scalar.AspNetCore" Version="2.13.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>
